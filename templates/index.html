@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beginner-friendly DevOps CI/CD project using Python, Docker and GitHub Actions.">
+    <title>DevOps CI/CD | Build Better</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="brand" href="#home">☁ DevOps <span>CI/CD</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#technologies">Technologies</a>
+    </nav>
+
+    <a class="nav-button" href="https://github.com/kotwalurja-03/docker-cicd-project"
+       target="_blank" rel="noreferrer">GitHub ↗</a>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="tag"><span class="live-dot"></span> MY DEVOPS PROJECT</div>
+
+            <h1>Build better.<br><span>Deploy smarter.</span></h1>
+
+            <p class="hero-description">
+                Explore how modern DevOps brings code, automated testing,
+                Docker containers and CI/CD automation together.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="primary-button" href="#pipeline">Explore Pipeline →</a>
+                <a class="secondary-button"
+                   href="https://github.com/kotwalurja-03/docker-cicd-project"
+                   target="_blank" rel="noreferrer">View Source Code ↗</a>
+            </div>
+
+            <div class="stats">
+                <div><strong>01</strong><small>Python App</small></div>
+                <div><strong>02</strong><small>Automated Tests</small></div>
+                <div><strong>03</strong><small>Docker Build</small></div>
+            </div>
+        </div>
+
+        <div class="visual">
+            <div class="flow-card">
+                <div class="flow-item">
+                    <div class="flow-icon blue-icon">&lt;/&gt;</div>
+                    <strong>Code</strong><small>GitHub</small>
+                </div>
+                <div class="arrow">→</div>
+                <div class="flow-item">
+                    <div class="flow-icon purple-icon">✓</div>
+                    <strong>Test</strong><small>Pytest</small>
+                </div>
+                <div class="arrow">→</div>
+                <div class="flow-item">
+                    <div class="flow-icon cyan-icon">▦</div>
+                    <strong>Build</strong><small>Docker</small>
+                </div>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-heading">
+                    <span></span><span></span><span></span>
+                    <label>pipeline.log</label>
+                </div>
+                <div class="terminal-content">
+                    <p><span class="muted">$</span> git push origin main</p>
+                    <p class="success">✓ Code pushed to GitHub</p>
+                    <p class="success">✓ Automated tests configured</p>
+                    <p class="success">✓ Docker image build configured</p>
+                    <div class="terminal-status">
+                        <span class="live-dot"></span> CI/CD PIPELINE
+                        <span class="right">AUTOMATION</span>
+                    </div>
+                </div>
+            </div>
+            <p class="visual-caption">Less manual work. More reliable releases.</p>
+        </div>
+    </section>
+
+    <section class="features section" id="features">
+        <div class="section-heading">
+            <p class="eyebrow">WHAT THIS PROJECT DEMONSTRATES</p>
+            <h2>DevOps, made practical.</h2>
+            <p>Small building blocks that form a modern software workflow.</p>
+        </div>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="feature-icon icon-blue">∞</div>
+                <h3>Continuous Integration</h3>
+                <p>Run automated checks when you push code to GitHub.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon icon-green">▣</div>
+                <h3>Docker Containers</h3>
+                <p>Package your app and dependencies into a consistent environment.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon icon-purple">⚙</div>
+                <h3>Automated Builds</h3>
+                <p>Use GitHub Actions to test code and build a Docker image.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon icon-orange">✓</div>
+                <h3>Health Endpoint</h3>
+                <p>Check whether the Flask application is responding correctly.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="pipeline-section section" id="pipeline">
+        <div class="section-heading">
+            <p class="eyebrow">FROM CODE TO CONTAINER</p>
+            <h2>How the pipeline works</h2>
+            <p>Understand the journey your code follows.</p>
+        </div>
+
+        <div class="pipeline-grid">
+            <article class="pipeline-step">
+                <span class="number">01</span>
+                <div class="step-icon icon-blue">&lt;/&gt;</div>
+                <h3>Push Code</h3>
+                <p>Commit your changes and push them to GitHub.</p>
+            </article>
+
+            <div class="connector">→</div>
+
+            <article class="pipeline-step">
+                <span class="number">02</span>
+                <div class="step-icon icon-purple">✓</div>
+                <h3>Run Tests</h3>
+                <p>Pytest checks that important app routes work.</p>
+            </article>
+
+            <div class="connector">→</div>
+
+            <article class="pipeline-step">
+                <span class="number">03</span>
+                <div class="step-icon icon-cyan">▦</div>
+                <h3>Build Image</h3>
+                <p>Docker builds an image of the application.</p>
+            </article>
+
+            <div class="connector">→</div>
+
+            <article class="pipeline-step">
+                <span class="number">04</span>
+                <div class="step-icon icon-green">☁</div>
+                <h3>Check Results</h3>
+                <p>Review the workflow result in GitHub Actions.</p>
+            </article>
+        </div>
+
+        <div class="note">
+            <strong>Project status:</strong> This workflow demonstrates automated
+            testing and image building. Automatic deployment is a possible next step.
+        </div>
+    </section>
+
+    <section class="technology-section section" id="technologies">
+        <div class="section-heading">
+            <p class="eyebrow">OUR TOOLKIT</p>
+            <h2>Technologies used</h2>
+            <p>Tools used to build and automate this project.</p>
+        </div>
+
+        <div class="technology-grid">
+            <div class="technology-card"><span class="tech-logo python">Py</span><strong>Python</strong><small>Programming</small></div>
+            <div class="technology-card"><span class="tech-logo flask">Fl</span><strong>Flask</strong><small>Web framework</small></div>
+            <div class="technology-card"><span class="tech-logo docker">▦</span><strong>Docker</strong><small>Containers</small></div>
+            <div class="technology-card"><span class="tech-logo github">⌘</span><strong>GitHub</strong><small>Version control</small></div>
+            <div class="technology-card"><span class="tech-logo actions">⚙</span><strong>Actions</strong><small>CI automation</small></div>
+            <div class="technology-card"><span class="tech-logo pytest">✓</span><strong>Pytest</strong><small>Testing</small></div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="brand" href="#home">☁ DevOps <span>CI/CD</span></a>
+    <p>Built with curiosity and automation.</p>
+    <a href="https://github.com/kotwalurja-03/docker-cicd-project"
+       target="_blank" rel="noreferrer">Source code ↗</a>
+</footer>
+
+</body>
+</html>
+

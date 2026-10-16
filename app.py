@@ -1,21 +1,12 @@
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def home():
-    return """
-    <html>
-        <head><title>Docker CI/CD Project</title></head>
-        <body>
-            <h1>My Docker DevOps Project</h1>
-            <p>Python application running successfully!</p>
-            <p>Docker + GitHub Actions CI/CD</p>
-        </body>
-    </html>
-    """
+    return render_template("index.html")
 
 
 @app.route("/health")
